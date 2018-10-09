@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AF735B95EF7521444C3C183 /* libPods-MCContainer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A2D592D5F33FC47F3A348F /* libPods-MCContainer.a */; };
 		F84B2B0B216CE03400CA1BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84B2B0A216CE03400CA1BCA /* AppDelegate.swift */; };
 		F84B2B0D216CE03400CA1BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84B2B0C216CE03400CA1BCA /* ViewController.swift */; };
 		F84B2B10216CE03400CA1BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F84B2B0E216CE03400CA1BCA /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A992046197B2849681DA767 /* Pods-MCContainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCContainer.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-MCContainer/Pods-MCContainer.debug.xcconfig"; sourceTree = "<group>"; };
+		50A2D592D5F33FC47F3A348F /* libPods-MCContainer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MCContainer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D44F9478596995FA604BB0AE /* Pods-MCContainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCContainer.release.xcconfig"; path = "../Pods/Target Support Files/Pods-MCContainer/Pods-MCContainer.release.xcconfig"; sourceTree = "<group>"; };
 		F84B2B07216CE03400CA1BCA /* MCContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84B2B0A216CE03400CA1BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F84B2B0C216CE03400CA1BCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF735B95EF7521444C3C183 /* libPods-MCContainer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61878042B669B2B3FCCB2C57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A992046197B2849681DA767 /* Pods-MCContainer.debug.xcconfig */,
+				D44F9478596995FA604BB0AE /* Pods-MCContainer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B4CE8A6D00F185A38AEC7D93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50A2D592D5F33FC47F3A348F /* libPods-MCContainer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F84B2AFE216CE03400CA1BCA = {
 			isa = PBXGroup;
 			children = (
 				F84B2B09216CE03400CA1BCA /* MCContainer */,
 				F84B2B1E216CE03500CA1BCA /* MCContainerTests */,
 				F84B2B08216CE03400CA1BCA /* Products */,
+				61878042B669B2B3FCCB2C57 /* Pods */,
+				B4CE8A6D00F185A38AEC7D93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +127,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F84B2B24216CE03500CA1BCA /* Build configuration list for PBXNativeTarget "MCContainer" */;
 			buildPhases = (
+				F3ABBEFF64AC3186774B250B /* [CP] Check Pods Manifest.lock */,
 				F84B2B03216CE03400CA1BCA /* Sources */,
 				F84B2B04216CE03400CA1BCA /* Frameworks */,
 				F84B2B05216CE03400CA1BCA /* Resources */,
@@ -191,6 +216,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F3ABBEFF64AC3186774B250B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MCContainer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F84B2B03216CE03400CA1BCA /* Sources */ = {
@@ -356,14 +402,12 @@
 		};
 		F84B2B25216CE03500CA1BCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A992046197B2849681DA767 /* Pods-MCContainer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MCContainer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.griddynamics.MCContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -373,14 +417,12 @@
 		};
 		F84B2B26216CE03500CA1BCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D44F9478596995FA604BB0AE /* Pods-MCContainer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MCContainer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.griddynamics.MCContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -395,11 +437,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MCContainerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.griddynamics.MCContainerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -415,11 +453,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MCContainerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.griddynamics.MCContainerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -1,0 +1,6 @@
+module MCComponent {
+  umbrella header "MCComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}
