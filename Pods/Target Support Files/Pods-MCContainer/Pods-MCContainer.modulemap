@@ -1,4 +1,4 @@
-module Pods_MCContainer {
+framework module Pods_MCContainer {
   umbrella header "Pods-MCContainer-umbrella.h"
 
   export *
