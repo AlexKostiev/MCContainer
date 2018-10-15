@@ -1,13 +1,17 @@
 PODS:
   - MCComponent (0.1.0)
+  - MCLocalComponent (0.1.0)
 
 DEPENDENCIES:
   - MCComponent (from `https://github.com/AlexKostiev/MCComponent.git`, branch `master`)
+  - MCLocalComponent (from `DevPods/MCLocalComponent`)
 
 EXTERNAL SOURCES:
   MCComponent:
     :branch: master
     :git: https://github.com/AlexKostiev/MCComponent.git
+  MCLocalComponent:
+    :path: DevPods/MCLocalComponent
 
 CHECKOUT OPTIONS:
   MCComponent:
@@ -16,7 +20,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   MCComponent: b89a0888c537e0613ef4cc61d975a45fbfe6afc0
+  MCLocalComponent: a472e208ef6ce433552ae2c5a477b1ec7822f53e
 
-PODFILE CHECKSUM: d5d04109cae5801776968bb60be345d5b4bde09b
+PODFILE CHECKSUM: 312a949bf8856f961e64fae760fcbe88aac1619f
 
 COCOAPODS: 1.5.3

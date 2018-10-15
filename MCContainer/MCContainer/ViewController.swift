@@ -8,32 +8,36 @@
 
 import UIKit
 import MCComponent
+import MCLocalComponent
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var stackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         guard let reusableButtonView = ReusableButtonView.fromNib() else { return }
         reusableButtonView.backgroundColor = .green
-        view.addSubview(reusableButtonView)
+        stackView.addArrangedSubview(reusableButtonView)
         
-        view.centerXAnchor.constraint(equalTo: reusableButtonView.centerXAnchor).isActive = true
-        reusableButtonView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        reusableButtonView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        reusableButtonView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
-        view.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        view.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        
-        reusableButtonView.buttonTapHandler = { reusableButtonView in
+        reusableButtonView.buttonTapHandler = { _ in
             print("button was tapped!")
         }
+        
+        guard let localReusableButtonView = LocalReusableButtonView.fromNib() else { return }
+        localReusableButtonView.backgroundColor = .yellow
+        stackView.addArrangedSubview(localReusableButtonView)
+        
+        localReusableButtonView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        localReusableButtonView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        
+        localReusableButtonView.buttonTapHandler = { _ in
+            print("button for local component was tapped!")
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
